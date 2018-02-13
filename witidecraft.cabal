@@ -1,0 +1,37 @@
+name:                witidecraft
+version:             1
+synopsis:            Experiments with gl in Haskell
+-- description:
+homepage:            https://github.com/relrod/witidecraft/
+license:             BSD2
+license-file:        LICENSE
+author:              Ricky Elrod
+maintainer:          ricky@elrod.me
+-- copyright:
+category:            Game
+build-type:          Simple
+extra-source-files:  ChangeLog.md, README.md
+cabal-version:       >= 1.10
+
+library
+  -- exposed-modules:
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >= 4 && < 5
+                     , gl >= 0.8 && < 1
+                     , linear >= 1.10 && < 2
+                     , sdl2 >= 2.3 && < 3
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+
+executable witidecraft
+  main-is:             Main.hs
+  hs-source-dirs:      src/exe
+  default-language:    Haskell2010
+  ghc-options:         -Wall -O3
+  build-depends:       base >= 4 && < 5
+                     , gl >= 0.8 && < 1
+                     , linear >= 1.10 && < 2
+                     , sdl2 >= 2.3 && < 3
+                     , witidecraft
